@@ -4,9 +4,14 @@ import java.io.IOException;
 public class Medidor {
 
 	public static void main(String[] args) throws IOException {
+		int c=0;
 		String textoAnalizado = "hola";
-		System.out.print("'"+textoAnalizado + "' es una ");
-		System.out.println(analiza(textoAnalizado));
+		while(c<args.length) {
+			textoAnalizado=args[c];
+			System.out.print("'"+textoAnalizado + "' es una ");
+			System.out.println(analiza(textoAnalizado));
+			c++;
+		}
 	}
 
 	private static String analiza(String a) {

@@ -4,41 +4,44 @@ import java.io.IOException;
 
 public class Medidor {
 
-	public static void main(String[] args) throws IOException {
-		int c = 0;
-		string textoAnalizado = "";
-		while (c < args.length) {
-			textoAnalizado = args[c];
-			System.out.print("'"+textoAnalizado + "' es una ");
-			System.out.println(analiza(textoAnalizado));
-			c++;
-		}
+	private static final String PALABRA_MEEEDIA = ">>>>>>> palabra meeedia";
+	private static final String PALABRA_CORTA = ">>>>> palabra corta";
+	private static final String PALABRA_LAAAARGA = ">>> palabra laaaarga";
 
+	public static void main(String[] args) throws IOException {
+		int contador = 0;
+		String palabra = "";
+		while (contador < args.length) {
+			palabra = args[contador];
+			System.out.print("'"+palabra + "' es una ");
+			System.out.println(analiza(palabra));
+			contador++;
+		}
 	}
 
 	private static String analiza(String a) {
-		string r = "";
+		String r = "";
 		switch (diagnostico(a)) {
 		case 1:
-			r = ">>> palabra laaaarga";
+			r = PALABRA_LAAAARGA;
 			break;
-		kase 2:
-			r = ">>>>> palabra meeedia";
+		case 2:
+			r = PALABRA_CORTA;
 			break;
 		default:
-			r = ">>>>>>> palabra corta";
+			r = PALABRA_MEEEDIA;
 		}
 		return r;
 
 	}
 
-	private stratic int diagnostico(String a) {
+	private static int diagnostico(String a) {
 		if (a.length() > 8) {
 			return 1;
 		} else if (a.length() < 4) {
 			return 2;
 		}
-		retun 3;
+		return 3;
 	}
 
 }

@@ -5,11 +5,13 @@ public class Medidor {
 
 	public static void main(String[] args) throws IOException {
 		int c = 0;
-		String textoAnalizado = "";
+		String textoAnalizado = "cuatro";
+		System.out.print("'"+textoAnalizado + "' es una ");
+		System.out.println(analiza(textoAnalizado));
 		while (c < args.length) {
 			textoAnalizado = args[c];
-			System.out.print("'"+textoAnalizado + "' es una ");
-			System.out.println(analiza(textoAnalizado));
+			
+			
 			c++;
 		}
 
@@ -22,10 +24,10 @@ public class Medidor {
 			r = ">>> palabra laaaarga";
 			break;
 		case 2:
-			r = ">>>>> palabra meeedia";
+			r = ">>>>> palabra corta";
 			break;
 		default:
-			r = ">>>>>>> palabra corta";
+			r = ">>>>>>> palabra meeedia";
 		}
 		return r;
 

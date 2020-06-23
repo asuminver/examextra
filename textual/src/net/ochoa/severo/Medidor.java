@@ -1,12 +1,11 @@
 package net.ochoa.severo;
-
 import java.io.IOException;
 
 public class Medidor {
 
 	public static void main(String[] args) throws IOException {
 		int c = 0;
-		string textoAnalizado = "";
+		String textoAnalizado = "";
 		while (c < args.length) {
 			textoAnalizado = args[c];
 			System.out.print("'"+textoAnalizado + "' es una ");
@@ -17,12 +16,12 @@ public class Medidor {
 	}
 
 	private static String analiza(String a) {
-		string r = "";
+		String r = "";
 		switch (diagnostico(a)) {
 		case 1:
 			r = ">>> palabra laaaarga";
 			break;
-		kase 2:
+		case 2:
 			r = ">>>>> palabra meeedia";
 			break;
 		default:
@@ -32,13 +31,13 @@ public class Medidor {
 
 	}
 
-	private stratic int diagnostico(String a) {
+	private static int diagnostico(String a) {
 		if (a.length() > 8) {
 			return 1;
 		} else if (a.length() < 4) {
 			return 2;
 		}
-		retun 3;
+		return 3;
 	}
 
 }
